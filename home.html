@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Functional Bank</title>
+  </head>
+  <body>
+    <header>
+      <h1 class="text-5xl text-center mt-5">
+        Functional <span class="font-medium text-red-500">BD Bank</span>!!
+      </h1>
+    </header>
+    <main>
+      <!-- Balance and tranction -->
+      <section class="mt-8">
+        <div class="grid grid-cols-3 gap-4 w-3/4 mx-auto text-white">
+          <div class="bg-yellow-400 p-8 rounded-lg">
+            <h4 class="text-3xl">Deposite</h4>
+            <h4 class="text-5xl font-medium">
+              $<span id="deposite-total">00</span>
+            </h4>
+          </div>
+          <div class="bg-green-400 p-8 rounded-lg">
+            <h4 class="text-3xl">Withdraw</h4>
+            <h4 class="text-5xl font-medium">
+              $<span id="withdraw-total">00</span>
+            </h4>
+          </div>
+          <div class="bg-pink-400 p-8 rounded-lg">
+            <h4 class="text-3xl">Balance</h4>
+            <h4 class="text-5xl font-medium">
+              $<span id="balance-total">1240</span>
+            </h4>
+          </div>
+        </div>
+      </section>
+
+      <!-- New Deposite and withdraw input  -->
+      <section class="mt-16">
+        <div class="grid grid-cols-2 gap-4 w-3/4 mx-auto text-white">
+          <div class="bg-green-400 p-8 pl-2 rounded-lg">
+            <h2 class="text-3xl">Please Deposite</h2>
+            <input
+              id="deposite-field"
+              class="h-8 text-black rounded-md mt-2 w-2/4 block"
+              type="text"
+              name=""
+              placeholder="  Enter deposite ammount"
+            />
+            <button
+              id="deposite-btn"
+              class="rounded-md bg-white text-green-600 font-bold mt-4 px-4 py-2 hover:bg-green-700 hover:text-white"
+            >
+              SUBMIT
+            </button>
+          </div>
+          <div class="bg-pink-400 p-8 pl-2 rounded-lg">
+            <h2 class="text-3xl">Please Withdraw</h2>
+            <input
+              id="withdraw-field"
+              class="h-8 rounded-md mt-2 w-2/4 text-black block"
+              type="text"
+              name=""
+              placeholder="  Enter withdraw ammount"
+            />
+            <button
+              id="withdraw-btn"
+              class="rounded-md bg-white text-pink-600 font-bold mt-4 px-4 py-2 hover:bg-pink-700 hover:text-white"
+            >
+              SUBMIT
+            </button>
+          </div>
+        </div>
+
+        <div class="text-center">
+          <button
+            id="logout"
+            class="bg-green-500 mt-8 font-bold mb-5 text-xl px-8 py-2 rounded drop-shadow-2xl text-white hover:bg-pink-600 hover:text-white"
+          >
+            Log Out
+          </button>
+        </div>
+      </section>
+    </main>
+    <script src="js/utilities.js"></script>
+    <script src="js/deposite.js"></script>
+    <script src="js/withdraw.js"></script>
+  </body>
+</html>
